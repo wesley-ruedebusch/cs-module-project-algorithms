@@ -3,9 +3,21 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
-
-    pass
+    solution = []
+    # loop thru array indices
+    for i in range(len(arr)):
+        # init product
+        product = 1
+        
+        # problem clearly hints at division,
+        # multiply all values in array and divide by arr[i]
+        for x in arr:
+            product = product * x
+        
+        product = product/arr[i]
+        solution.append(product)
+        
+    return solution   
 
 
 if __name__ == '__main__':
